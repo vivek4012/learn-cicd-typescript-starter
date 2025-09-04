@@ -24,8 +24,8 @@ jobs:
       - name: Run tests
         run: npm run test -- --coverage
 
-  lint:
-    name: Lint
+  style:
+    name: style
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -39,5 +39,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linter
+      - name: format check
         run: npm run format:check
+
+      - name: lint check
+        run: npm run lint -- --max-warnings=0
