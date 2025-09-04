@@ -26,7 +26,7 @@ jobs:
 
   lint:
     name: Lint
-    runss-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v4
